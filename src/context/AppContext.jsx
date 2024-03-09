@@ -37,6 +37,8 @@ const StoreProvider = ({ children }) => {
         getTaskDatas();
     }, []);
 
+    console.log(first);
+
     return (
         <AppContext.Provider
             value={{ TaskDatas, updateTask, isLoading, setIsLoading }}
