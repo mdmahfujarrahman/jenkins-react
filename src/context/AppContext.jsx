@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import { AppService } from "../services/appServices";
 
 export const AppContext = createContext();
-
 const StoreProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [TaskDatas, setTaskDatas] = useState([]);
