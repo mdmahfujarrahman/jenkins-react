@@ -18,9 +18,8 @@ const routes = Router([
         path: "/single/:id",
         element: <SingleTask />,
         loader: async ({ params }) => {
-            console.log(params.id);
             const check = await AppService.getAllTask(params.id);
-            console.log(check.data.data);
+
             return check.data.data;
         },
     },
