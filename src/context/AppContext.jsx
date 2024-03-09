@@ -5,7 +5,6 @@ export const AppContext = createContext();
 const StoreProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [TaskDatas, setTaskDatas] = useState([]);
-
     const getTaskDatas = async () => {
         const res = await AppService.getAllTask();
         setTaskDatas(res?.data?.data);
